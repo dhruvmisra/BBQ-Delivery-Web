@@ -6,7 +6,7 @@
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
           <div class="form-group">
             <label for="first_name">First Name</label>
-            <input type="text" v-model="first_name" class="form-control" name="first_name" placeholder="Enter Fist Name">
+            <input type="text" v-model="first_name" class="form-control" name="first_name" placeholder="Enter First Name">
           </div>
           <div class="form-group">
             <label for="last_name">Last Name</label>
@@ -39,7 +39,7 @@ export default {
       password: ''
     }
   },
-  methods: {
+   methods: {
     register () {
       axios.post('users/register', {
         first_name: this.first_name,
@@ -49,7 +49,7 @@ export default {
       }).then(res => {
         router.push({ name: 'Login' })
       }).catch(err => {
-        console.log(err)
+        window.alert(err.response.data.err)
       })
     }
   }

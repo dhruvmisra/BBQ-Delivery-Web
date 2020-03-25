@@ -7,7 +7,7 @@
             <table class="table col-md-6 mx-auto">
                 <tbody>
                     <tr>
-                        <td>First Name</td>
+                        <td>First Name  </td>
                         <td>{{first_name}}</td>
                     </tr>
                     <tr>

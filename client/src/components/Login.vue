@@ -40,8 +40,12 @@ export default {
         this.email = ''
         this.password = ''
         router.push({ name: 'Profile' })
-      }).catch(err => {
-        console.log(err)
+      }).catch( ({
+          response
+      })=> {
+        // console.log(err)
+        window.alert(response.data.error)
+        
       })
       this.emitMethod()
     },

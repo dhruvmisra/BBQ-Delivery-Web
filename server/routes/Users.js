@@ -35,11 +35,11 @@ users.post("/register", (req, res) => {
                         })
                 })
             } else {
-                res.json({ error: 'User already exists' })
+                res.status(400).json({ error: 'User already exists' })
             }
         })
         .catch(err => {
-            res.send('error: ' + err)
+            res.status(400).send('error: ' + err)
         })
 })
 
@@ -61,14 +61,14 @@ users.post('/login', (req, res) => {
                     })
                     res.send(token)
                 } else {
-                    res.json({ error: 'User does not exist' })
+                    res.status(400).json({ error: 'Password does not match' })
                 }
             } else {
-                res.json({ error: 'User does not exist' })
+                res.status(400).json({ error: 'User does not exist' })
             }
         })
         .catch(err => {
-            res.send('error: ' + err)
+            res.status(400).send('error: ' + err)
         })
 })
 
@@ -78,7 +78,9 @@ users.get('/profile',(req,res) =>{
 User.findOne({
     _id:decoded._id
 })
+
 .then(user => {
+    console.log(user)
     if (user) {
         res.json(user)
     }else{
