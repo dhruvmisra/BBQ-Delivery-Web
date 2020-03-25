@@ -3,23 +3,23 @@
     <div class="row">
       <div class="col-md-6 mt-5 mx-auto">
         <form v-on:submit.prevent="register">
-          <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-          <div class="form-group">
+          <h3 >Sign Up to experience the convenience of grilling anywhere</h3><br></br>
+          <div class="form-item box-item">
             <label for="first_name">First Name</label>
             <input type="text" v-model="first_name" class="form-control" name="first_name" placeholder="Enter First Name">
-          </div>
-          <div class="form-group">
+          </div><br></br>
+          <div class="form-item box-item">
             <label for="last_name">Last Name</label>
             <input type="text" v-model="last_name" class="form-control" name="last_name" placeholder="Enter Last Name">
-          </div>
-          <div class="form-group">
+          </div><br></br>
+          <div class="form-item box-item">
             <label for="email">Email Address</label>
             <input type="email" v-model="email" class="form-control" name="email" placeholder="Enter Email">
-          </div>
-          <div class="form-group">
+          </div><br></br>
+          <div class="form-item box-item">
             <label for="password">Password</label>
             <input type="password" v-model="password" class="form-control" name="password" placeholder="Enter Password">
-          </div>
+          </div><br></br>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
         </form>
       </div>
@@ -55,3 +55,22 @@ export default {
   }
 }
 </script>
+<style scoped>
+.form-item input[type="text"],
+.form-item input[type="number"],
+.form-item input[type="email"],.form-item input[type="password"] {
+  display: block;
+  color:black;
+  font-size: 24px;
+  font-weight:300;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #75759e;
+  padding: 8px 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+</style>

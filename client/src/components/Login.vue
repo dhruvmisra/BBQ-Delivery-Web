@@ -1,18 +1,20 @@
+
 <template>
     <div class="container">
         <div class="row">
+             <h1 class="login-h1">Welcome Back!</h1><br></br>
             <div class="col-md-6 mt-5 mx-auto">
                 <form v-on:submit.prevent="login">
-                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <div class="form-group">
+                    <h3 class="login-h3">Please sign in</h3><br></br>
+                    <div class="form-item box-item">
                         <label for="email">Email Address</label>
                         <input type="email" v-model="email" class="form-control" name="email" placeholder="Enter Email">
-                    </div>
-                    <div class="form-group">
+                    </div><br></br>
+                    <div class="form-item box-item">
                         <label for="password">Password</label>
                         <input type="password" v-model="password" class="form-control" name="password" placeholder="Enter Password">
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </div><br></br>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
                 </form>
             </div>
         </div>
@@ -55,3 +57,34 @@ export default {
   }
 }
 </script>
+<style scoped>
+.form-item input[type="text"],
+.form-item input[type="number"],
+.form-item input[type="email"],.form-item input[type="password"] {
+  display: block;
+  color:black;
+  font-size: 24px;
+  font-weight:300;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #54b7e663;
+  padding: 8px 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+.login-h1{
+    text-align: center;
+   margin-left:40%;
+   margin-top:5%;
+   font-size:34px;
+}
+.login-h3{
+    text-align: center;
+   
+   font-size:24px;
+
+}
+</style>

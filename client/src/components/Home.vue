@@ -1,10 +1,13 @@
 <template>
 
     <div class="container-fluid">
+        
   <div class="row no-gutter">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
-        <div class="logo"></div>
-        <div class="text-container"><div class="text">BBQ Delivery service at the  touch  of a button </div>
+        <img src="./images/logo.png" class="logo">
+        <div class="text-container">
+           
+            <div class="text">BBQ Delivery service at the  touch  of a button </div>
         <button class="learnmore" >Learn More</button>
     </div></div>
     <div class="col-md-8 col-lg-6">
@@ -39,7 +42,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 } */.bg-image {
-  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/3646847/pexels-photo-3646847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/6026/man-vacation-people-summer.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -59,6 +62,11 @@
     border: 5px 5px;
     margin-top:6%;
 }
+.learnmore:hover{
+    background-color: wheat;
+    color:black;
+    transition: 1s ease-in;
+}
 .text{
     /* margin-top:40%;
     margin-left:30%; */
@@ -74,6 +82,12 @@
     margin-left:18%;
     
 }
+.logo{
+    height:130px;
+    width:130px;
+    top:2%;
+}
+
 </style>
 <script>
 import Register from './Register'
